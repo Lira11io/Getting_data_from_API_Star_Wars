@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/styles/normalize.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Star Wars</title>
+  </head>
+  <body>
+    <div class="root">
+      <h1 class="title">ВСЕЛЕННАЯ STAR WARS</h1>
+      <div class="text">
+        Добро пожаловать во Вселенную Star Wars! Вы можете запросить из
+        канонической вселенной данные о персонажах, кораблях, фильмах и не
+        только!
+      </div>
+      <div class="container">
+        <form class="form" action="#" name="meForm">
+          <div class="form__find">
+            <label class="form__find-label" for="form__find-item"
+              >Кого или что будем искать?
+              <select class="form__find-item" name="find" id="form__find-item">
+                <option value="" disabled selected>-Выберите объект-</option>
+                <option value="films">Фильмы</option>
+                <option value="people">Люди</option>
+                <option value="planets">Планеты</option>
+                <option value="species">Разновидности</option>
+                <option value="starships">Звездолеты</option>
+                <option value="vehicles">Транспортные средства</option>
+              </select>
+            </label>
+          </div>
+          <div class="form__number">
+            <label class="form__number-label" for="form__number-item">
+              Введите номер от 1 до 10
+              <input
+                class="form__number-item"
+                type="number"
+                name="number"
+                id="form__number-item"
+                min="1"
+                max="10"
+                step="1"
+              />
+            </label>
+          </div>
+          <button class="form__button" type="button">Поиск</button>
+        </form>
+      </div>
+      <div class="result"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
