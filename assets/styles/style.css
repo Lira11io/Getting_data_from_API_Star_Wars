@@ -15,7 +15,6 @@ body {
 .title {
   text-align: center;
   font-size: 4rem;
-  margin-top: 1.3em;
 }
 
 /*Вступительный текст*/
@@ -28,7 +27,7 @@ body {
 
 /*Обертка для формы*/
 .container {
-  margin-top: 3em;
+  margin-top: 1em;
   display: flex;
   justify-content: space-around;
   font-size: 1.5rem;
@@ -44,8 +43,8 @@ body {
 /*блоки для выбора */
 .form__find,
 .form__number {
-  margin-top: 3%;
-  margin-bottom: 5%;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 /*поле ввода запросов */
@@ -73,11 +72,59 @@ option {
 /*кнопка "Поиск"*/
 .form__button {
   margin-top: 17px;
-  padding: 3%;
+  padding: 10px;
   border-radius: 10px;
   border: 2px solid azure;
   cursor: pointer;
   width: 10rem;
   background-color: black;
   color: azure;
+}
+
+/*блок вывода ошибки в случае незаполненных полей*/
+.form__error_empty {
+  color: red;
+  font-size: 1.6rem;
+}
+
+/*блок вывода результата поиска*/
+.result {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*параметры шрифта результата поиска*/
+.result__text {
+  font-style: italic;
+}
+
+/*подчеркивание названия выводимой переменной*/
+.result__text-span {
+  border-bottom: 2px azure dotted;
+}
+
+/*значок загрузки*/
+.spinner {
+  height: 30px;
+  width: 30px;
+  border-left: 3px solid azure;
+  border-bottom: 3px solid azure;
+  border-right: 3px solid azure;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spinner 1.2s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
