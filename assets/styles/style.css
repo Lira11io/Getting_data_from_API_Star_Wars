@@ -82,7 +82,9 @@ option {
 }
 
 /*блок вывода ошибки в случае незаполненных полей*/
-.form__error_empty {
+/*блок вывода ошибки, если при загрузке что-то пошло не так*/
+.form__error_empty,
+.error__text {
   color: red;
   font-size: 1.6rem;
 }
@@ -103,6 +105,13 @@ option {
 /*подчеркивание названия выводимой переменной*/
 .result__text-span {
   border-bottom: 2px azure dotted;
+}
+/*блок вывода ошибки, если при загрузке что-то пошло не так*/
+.error__text {
+  color: red;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 1.6rem;
 }
 
 /*значок загрузки*/
