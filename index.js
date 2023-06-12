@@ -22,11 +22,13 @@ btn.addEventListener("click", () => {
       ".form__error"
     ).innerHTML = `<div class="form__error_empty">Пожалуйста, выберите объект и его номер!</div>`;
     spinner.style.display = "none"; //убираем отображение спиннера загрузки
+    document.querySelector(".result").innerHTML = ""; //очищаем поле вывода результата поиска
   } else if (num > 10) {
     document.querySelector(
       ".form__error"
     ).innerHTML = `<div class="form__error_empty">Номер объекта должен быть меньше 10! Пожалуйста, выберите другой номер!</div>`;
     spinner.style.display = "none"; //убираем отображение спиннера загрузки
+    document.querySelector(".result").innerHTML = ""; //очищаем поле вывода результата поиска
   } else {
     //если оба поля заполнены, очищаем поле вывода ошибки
     document.querySelector(".form__error").innerHTML = "";
@@ -51,6 +53,7 @@ btn.addEventListener("click", () => {
     .catch((error) => {
       //если произошла ошибка, выводим сообщение о ней
       error.innerHTML = `<p class="error__text">${error.message}</p>`;
+      document.querySelector(".result").innerHTML = ""; //очищаем поле вывода результата поиска
     })
     .finally(() => {
       spinner.style.display = "none"; //оключаем отображение спиннера загрузки
