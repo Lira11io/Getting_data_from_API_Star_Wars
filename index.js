@@ -14,8 +14,8 @@ btn.addEventListener("click", () => {
   //очищаем поле с сообщением об ошибке
   error.innerHTML = "";
 
-  let find = document.querySelector(".form__find-item").value; //задаем переменную для значения поля option
-  let num = document.querySelector(".form__number-item").value; //задаем переменную для значения input number
+  const find = document.querySelector(".form__find-item").value; //задаем переменную для значения поля option
+  const num = document.querySelector(".form__number-item").value; //задаем переменную для значения input number
   //если хотя бы одно из полей незаполнено, выводим сообщение
   if (find === "-Выберите объект-" || num === "") {
     document.querySelector(
@@ -35,7 +35,7 @@ btn.addEventListener("click", () => {
   }
 
   //создаем запрос в API
-  fetch("https://swapi.dev/api/" + `${find}` + `/${num}`) //GET запрос по адресу
+  fetch(`https://swapi.dev/api/${find}/${num}`) //GET запрос по адресу
     .then((response) => {
       //обрабатываем полученные данные
       if (!response.ok) {
@@ -47,7 +47,9 @@ btn.addEventListener("click", () => {
       return response.json(); //возвращаем json с данными
     })
     .then((response) => {
-      result.innerHTML = `<p class="result__text">Результат: <span class="result__text-span">${response.name}</span></p>`;
+      result.innerHTML = `<p class="result__text">Результат: <span class="result__text-span">${
+        response.name || response.title
+      }</span></p>`;
       error.innerHTML = ""; //очищаем сообщение об ошибке
     })
     .catch((error) => {
