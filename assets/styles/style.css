@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(/assets/img/space2.jpg);
+  background: url(../img/space2.jpg);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
