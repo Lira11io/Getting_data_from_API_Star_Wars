@@ -1,4 +1,4 @@
-# Getting_data_from_API_Star_Wars
+# [Getting_data_from_API_Star_Wars]( https://lira11io.github.io/Getting_data_from_API_Star_Wars/)
 
 ### Получение данных из API - SWAPI - The Star Wars
 
